@@ -91,7 +91,7 @@ will create a `PytorchJob` that runs the finetuning workload.
 ```sh
 DATA_DIR=/$PVC_SUBPATH RESTORE_FROM_PATH=/$PVC_SUBPATH/llama2_7b.nemo \
   HELM_RELEASE_NAME=llama-7b-peft-lora \
-  examples/peft/lora_llama2_7b_2A6000_k8s.sh \
+  examples/peft/lora_llama2_7b_4A100_k8s.sh \
   cluster.volumes.persistentVolumeClaim.claimName=$PVC_NAME \
   cluster.volumes.persistentVolumeClaim.subPath=$PVC_SUBPATH \
   "peft.exp_manager.explicit_log_dir=/$PVC_SUBPATH/\${peft.run.model_train_name}/peft_\${peft.run.name}/results"
